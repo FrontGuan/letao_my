@@ -7,6 +7,9 @@ html,body{
     width: 180px;
     background-color: #222d32;
     height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .letao_aside .header {
@@ -63,4 +66,25 @@ html,body{
     line-height: 30px;
     font-size:12px;
     padding-left: 50px;
+}
+
+/* 主体区域样式 */
+.letao_main {
+    margin-left: 180px;
+}
+
+.letao_main .header {
+    height: 50px;
+    background-color: #3c8dbc;
+    padding: 0 20px;
+}
+
+.letao_main .header a {
+    line-height: 50px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.letao_main .content{
+    padding: 30px 20px 0;
 }

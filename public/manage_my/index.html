@@ -53,9 +53,23 @@
     </div>
     <div class="letao_main">
         <div class="header">
-            
+            <a href="javascript:void(0)" class="glyphicon glyphicon-glass pull-left">
+            </a>
+            <a href="javascript:void(0)" class="glyphicon glyphicon-log-out pull-right"></a>
         </div>
-        <div class="content"></div>
+        <div class="content clearfix">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="#">管理系统</a>
+                </li>
+                <li>
+                    首页
+                </li>
+            </ol>
+            <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+            <div id="main-left" class="pull-left" style="width: 500px;height:400px;left:0"></div>
+            <div id="main-right" class="pull-right" style="width: 500px;height:400px; "></div>
+        </div>
     </div>
 
 
@@ -65,4 +79,5 @@
 
 <script src="./lib/jquery/jquery.min.js"></script>
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./lib/echarts/echarts.min.js"></script>
 <script src="./js/index.js"></script>
