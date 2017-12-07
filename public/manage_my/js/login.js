@@ -57,6 +57,8 @@ $(function () {
         }
     }).on('success.form.bv', function (e) {
         e.preventDefault();
+        //点击登陆,开启进度条
+        NProgress.start();
         //使用ajax提交逻辑
         $.ajax({
             url: '/employee/employeeLogin',
@@ -72,13 +74,15 @@ $(function () {
                     //获取表单校验实例
                     var validator = $("form").data('bootstrapValidator'); 
                     if(backData.error == 1000) {
-                        //更新用户名提示字段的状态
+                        //更新用户名错误提示字段的状态
                         validator.updateStatus('username', 'INVALID', 'callback');
                     }else {
-                        //更新用户名提示字段的状态
+                        //更新密码错误提示字段的状态
                         validator.updateStatus('password', 'INVALID', 'callback');
                     }
                 }
+                //数据返回,关闭进度条
+                NProgress.done();
             }
         })
     });
