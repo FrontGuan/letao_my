@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>首页</title>
+</head>
+
+<body>
+    <div class="letao_aside">
+        <div class="header">
+            <h2>
+                <a href="javascript:void(0)">FEDERER</a>
+            </h2>
+        </div>
+        <div class="user">
+            <img src="./images/default.png" alt="">
+            <span>超级管理员</span>
+        </div>
+        <div class="manager">
+            <ul>
+                <li class="active">
+                    <a href="javascript:void(0)">
+                        <i class="glyphicon glyphicon-user"></i>用户管理
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <i class="glyphicon glyphicon-align-justify"></i>分类管理
+
+                    </a>
+                    <ol>
+                        <li>
+                            <a href="javascript:void(0)">一级分类</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">二级分类</a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <i class="glyphicon glyphicon-tags"></i>商品管理
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="letao_main">
+        <div class="header">
+            <a href="javascript:void(0)" class="glyphicon glyphicon-glass pull-left">
+            </a>
+            <a href="javascript:void(0)" class="glyphicon glyphicon-log-out pull-right"></a>
+        </div>
+        <div class="content clearfix">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="#">管理系统</a>
+                </li>
+                <li>
+                    首页
+                </li>
+            </ol>
+            <table class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>序号</th>
+                    <th>用户名</th>
+                    <th>手机号</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>itcast</td>
+                    <td>18679442408</td>
+                    <td>正常</td>
+                    <td><button class="btn btn-danger">禁用</button></td>
+                  </tr>
+                </tbody>
+            </table>
+            <ul id="pagintor"></ul>
+        </div>
+    </div>
+
+    <div class="modal fade modal_myOpen" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">温馨提示</h4>
+            </div>
+            <div class="modal-body">
+              <p class="text-danger"><i class="glyphicon glyphicon-info-sign"></i> 你确定要退出后台管理系统吗?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-primary">确定</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+
+</body>
+
+</html>
+
+<script type="text/html" id="userData">
+    {{each rows}}
+        <tr>
+            <th scope="row">{{(page-1) * size + 1 + $index}}</th>
+            <td>{{$value.username}}</td>
+            <td>{{$value.mobile}}</td>
+            <td>
+                {{if $value.isDelete==0}}
+                    正常
+                {{else}}
+                    已禁用
+                {{/if}}
+            </td>
+            <td data-id={{$value.id}}>
+                {{if $value.isDelete==0}}
+                    <button class="btn btn-danger">禁用</button>
+                {{else}}
+                    <button class="btn btn-primary">启用</button>
+                {{/if}}
+            </td>
+        </tr>
+    {{/each}}
+</script>
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./lib/echarts/echarts.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/user.js"></script>
