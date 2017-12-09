@@ -78,4 +78,5 @@ $(function () {
     };
     myChart2.setOption(option2);
 
+    
 })
