@@ -24,7 +24,7 @@ $(function(){
         $('.modal_myOpen').modal('show');
     })
     //点击确定按钮关闭模态框,调用登出接口
-    $('.modal-footer button.btn-primary').click(function(){
+    $('.modal_myOpen .modal-footer button.btn-primary').click(function(){
         $('.modal_myOpen').modal('hide');
         //调用登出接口,回登陆页
         $.get('/employee/employeeLogout',function(){

@@ -116,3 +116,8 @@ html,body{
 .letao_main .content{
     padding: 30px 20px 0;
 }
+
+/* 添加工具类 */
+.mb_30 {
+    margin-bottom: 30px;
+}

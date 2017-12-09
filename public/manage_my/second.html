@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
+    <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <title>二级分类</title>
+</head>
+
+<body>
+    <div class="letao_aside">
+        <div class="header">
+            <h2>
+                <a href="javascript:void(0)">FEDERER</a>
+            </h2>
+        </div>
+        <div class="user">
+            <img src="./images/default.png" alt="">
+            <span>超级管理员</span>
+        </div>
+        <div class="manager">
+            <ul>
+                <li>
+                    <a href="user.html">
+                        <i class="glyphicon glyphicon-user"></i>用户管理
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <i class="glyphicon glyphicon-align-justify"></i>分类管理
+
+                    </a>
+                    <ol>
+                        <li>
+                            <a href="javascript:void(0)" style="color: #fff">一级分类</a>
+                        </li>
+                        <li class="active">
+                            <a href="second.html">二级分类</a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="products.html">
+                        <i class="glyphicon glyphicon-tags"></i>商品管理
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="letao_main">
+        <div class="header">
+            <a href="javascript:void(0)" class="glyphicon glyphicon-glass pull-left">
+            </a>
+            <a href="javascript:void(0)" class="glyphicon glyphicon-log-out pull-right"></a>
+        </div>
+        <div class="content clearfix">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="#">管理系统</a>
+                </li>
+                <li>
+                    分类管理
+                </li>
+                <li>
+                    二级分类
+                </li>
+            </ol>
+            <button class="btn btn-default mb_30" data-toggle="modal" data-target=".modal-add">添加分类</button>
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>一级分类名称</th>
+                        <th>二级分类名称</th>
+                        <th>二级分类LOGO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>女士馆</td>
+                        <td>阿迪斯</td>
+                        <td>
+                            <img src="" alt="">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul id="pagintor"></ul>
+        </div>
+    </div>
+    <!-- 退出登陆模态框 -->
+    <div class="modal fade modal_myOpen" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">温馨提示</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="text-danger">
+                        <i class="glyphicon glyphicon-info-sign"></i> 你确定要退出后台管理系统吗?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 添加二级分类模态框 -->
+    <div class="modal fade modal-add" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">添加分类</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="secondForm">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" class="pull-left">一级分类</label>
+                            <div class="dropdown pull-left" style="margin-top:-10px">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="true">
+                                    Dropdown
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#">Action</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Another action</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Something else here</a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>
+                                        <a href="#">Separated link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入二级分类名称">
+                        </div>
+                        <div class="form-group">
+                            <input type="file" class="btn btn-default" value="上传图片">
+                        </div>
+                        <div class="form-group">
+                            <img style="width:100px;height:100px;" src="./images/none.png" alt="">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <!-- form属性: 关联form表单(当提交按钮不再form表单内时) -->
+                    <button type="submit" form="secondForm" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script type="text/html" id="secondTmp">
+    {{each rows}}
+    <tr>
+        <th scope="row">{{(page-1) * size + 1 + $index}}</th>
+        <td>{{$value.categoryName}}</td>
+        <td>{{$value.brandName}}</td>
+        <td>
+            <img src="{{$value.brandLogo}}" alt="" style="width: 100px">
+        </td>
+    </tr>
+    {{/each}}
+</script>
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+<script src="./lib/nprogress/nprogress.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/second.js"></script>
