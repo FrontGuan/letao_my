@@ -1,8 +1,7 @@
-
-$(function(){
+$(function () {
     var myPage = 1; //当前页码
     var myPagesize = 5; //每页的条数
-    function getSecondData(){
+    function getSecondData() {
         //表格数据渲染
         $.ajax({
             url: '/category/querySecondCategoryPaging',
@@ -33,4 +32,41 @@ $(function(){
         })
     }
     getSecondData();
+
+
+    //上传文件插件使用
+    $("#fileUpload").fileupload({
+        dataType: "json",
+        //e：事件对象
+        //data：图片上传后的对象，通过e.result.picAddr可以获取上传后的图片地址
+        done: function (e, data) {
+            console.log(data);
+            console.log(data.result.picAddr);
+            // 把这个路径给img
+            $('form img').attr('src', data.result.picAddr);
+        }
+    });
+    //添加分类中一级分类下拉框值渲染
+    $.ajax({
+        url: '/category/queryTopCategoryPaging',
+        data: {
+            page: 1,
+            pageSize: 100
+        },
+        success:function(backData){
+            //代码清空dropdown-menu的值
+            $('.dropdown-menu').html('');
+            console.log(backData);
+            $.each(backData.rows,function(i,n){
+                console.log(n);
+                var $li =  '<li><a href="#">'+ n.categoryName +'</a></li>';
+                $('.dropdown-menu').append($li);
+            })
+        }
+    })
+    //点击dropdown-menu的li改变当前选择的值
+    $('.dropdown-menu').on('click','li',function(){
+        console.log($(this).find('a').html());
+        $('.selected-value').html($(this).find('a').html());
+    })
 })

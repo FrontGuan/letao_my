@@ -36,4 +36,18 @@ $(function(){
     $('.letao_aside ul>li:eq(1)>a').click(function(){
         $(this).siblings('ol').slideToggle();
     })
+
+    //上传文件插件使用
+    $("#fileUpload").fileupload({
+        dataType:"json",
+        //e：事件对象
+        //data：图片上传后的对象，通过e.result.picAddr可以获取上传后的图片地址
+        done:function (e, data) {
+          console.log(data);
+          console.log(data.result.picAddr);
+          // 把这个路径给img
+          $('form img').attr('src',data.result.picAddr);
+        }
+      });
+
 })

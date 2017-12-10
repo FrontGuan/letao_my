@@ -129,11 +129,11 @@
                 <div class="modal-body">
                     <form id="secondForm">
                         <div class="form-group">
-                            <label for="exampleInputEmail1" class="pull-left">一级分类</label>
-                            <div class="dropdown pull-left" style="margin-top:-10px">
+                            <div class="dropdown">
+                                <span>一级分类</span>
                                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
                                     aria-expanded="true">
-                                    Dropdown
+                                    <span class="selected-value">请选择</span>
                                     <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -157,7 +157,10 @@
                             <input type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入二级分类名称">
                         </div>
                         <div class="form-group">
-                            <input type="file" class="btn btn-default" value="上传图片">
+                            <!-- 文件上传插件 data-url:文件上传路径 -->
+                            <input id="fileUpload" type="file"  name="pic1" data-url="/category/addSecondCategoryPic" class="btn btn-default" value="上传图片">
+                            <!-- a标签按钮为了盖住上面的input=file标签 -->
+                            <a href="javascript:void(0)" class="btn btn-default"><i class="glyphicon glyphicon-picture"></i>上传图片</a>
                         </div>
                         <div class="form-group">
                             <img style="width:100px;height:100px;" src="./images/none.png" alt="">
@@ -195,5 +198,7 @@
 <script src="./lib/artTemplate/template.js"></script>
 <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>
+<script src="./lib/jquery-fileupload/jquery.ui.widget.js"></script>
+<script src="./lib/jquery-fileupload/jquery.fileupload.js"></script>
 <script src="./js/common.js"></script>
 <script src="./js/second.js"></script>
