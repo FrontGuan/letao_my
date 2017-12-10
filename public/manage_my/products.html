@@ -133,27 +133,29 @@
                 <div class="modal-body">
                     <form id="productsForm">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入商品名称">
+                            <input type="text" name="proName" class="form-control" id="exampleInputEmail1" placeholder="请输入商品名称">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" rows="3" placeholder="请输入商品描述"></textarea>
+                            <textarea class="form-control" name="proDesc" rows="3" placeholder="请输入商品描述"></textarea>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入商品库存">
+                            <input type="text" name="num" class="form-control" id="exampleInputEmail1" placeholder="请输入商品库存">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入商品价格">
+                            <input type="text" name="price" class="form-control" id="exampleInputEmail1" placeholder="请输入商品价格">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入商品原价">
+                            <input type="text" name="oldPrice" class="form-control" id="exampleInputEmail1" placeholder="请输入商品原价">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入商品尺码">
+                            <input type="text" name="size" class="form-control" id="exampleInputEmail1" placeholder="请输入商品尺码">
                         </div>
                         <div class="form-group">
-                            <input type="file" class="btn btn-default" value="上传图片">
-                            <p class="help-block">提示:必须上传三个图片</p>
+                            <input id="fileUpload" type="file" name="pic1" data-url="/product/addProductPic" class="btn btn-default" value="上传图片">
+                            <a href="javascript:void(0)" class="btn btn-default"><i class="glyphicon glyphicon-picture"></i>上传图片</a>
+                            <span>提示:必须上传三个图片</span><br>
                         </div>
+                       
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -197,5 +199,7 @@
 <script src="./lib/artTemplate/template.js"></script>
 <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>
+<script src="./lib/jquery-fileupload/jquery.ui.widget.js"></script>
+<script src="./lib/jquery-fileupload/jquery.fileupload.js"></script>
 <script src="./js/common.js"></script>
 <script src="./js/products.js"></script>

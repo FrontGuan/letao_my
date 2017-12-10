@@ -186,14 +186,14 @@
 
 <script type="text/html" id="secondTmp">
     {{each rows}}
-    <tr>
-        <th scope="row">{{(page-1) * size + 1 + $index}}</th>
-        <td>{{$value.categoryName}}</td>
-        <td>{{$value.brandName}}</td>
-        <td>
-            <img src="{{$value.brandLogo}}" alt="" style="width: 100px">
-        </td>
-    </tr>
+        <tr>
+            <th scope="row">{{(page-1) * size + 1 + $index}}</th>
+            <td>{{$value.categoryName}}</td>
+            <td>{{$value.brandName}}</td>
+            <td>
+                <img src="{{$value.brandLogo}}" alt="" style="width: 56px">
+            </td>
+        </tr>
     {{/each}}
 </script>
 
