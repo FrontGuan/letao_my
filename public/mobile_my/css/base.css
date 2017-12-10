@@ -1,0 +1,88 @@
+
+html , body {
+    height: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+ul , ol {
+    list-style: none;
+}
+
+
+/* 页面大盒子 */
+.lt_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+} 
+
+.lt_header {
+    height: 45px;
+    background-color: #006699;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    color: #fff;
+}
+
+.lt_header a {
+    color: #fff;
+}
+
+.lt_header h4 {
+    font-weight: normal;
+}
+
+.lt_content {
+    flex: 1;
+    background-color: pink;
+}
+
+.lt_footer {
+    height: 55px;
+    background-color: #006699;
+}
+
+.lt_footer ul {
+    height: 100%;
+    display: flex;
+    
+}
+
+.lt_footer ul li {
+    height: 100%;
+    flex: 1;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.lt_footer ul a {
+    color: #fff;
+}
+.lt_footer ul a span{}
+.lt_footer ul a p{
+    font-size: 12px;
+    color: #fff;
+}
+
+/* 高亮 */
+.lt_footer ul li.active a {
+    color: orange;
+}
+
+.lt_footer ul li.active a p {
+    color: orange;
+}
+
