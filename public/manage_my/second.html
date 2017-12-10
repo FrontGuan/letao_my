@@ -152,9 +152,12 @@
                                     </li>
                                 </ul>
                             </div>
+                            <!-- 用来存categoryId -->
+                            <input type="text" hidden name="categoryId">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入二级分类名称">
+                            <!-- 用来存brandName -->
+                            <input type="text" name="brandName" class="form-control" id="exampleInputPassword1" placeholder="请输入二级分类名称">
                         </div>
                         <div class="form-group">
                             <!-- 文件上传插件 data-url:文件上传路径 -->
@@ -164,6 +167,8 @@
                         </div>
                         <div class="form-group">
                             <img style="width:100px;height:100px;" src="./images/none.png" alt="">
+                            <!-- 用来存放品牌logo图片地址 -->
+                            <input type="text" hidden name="brandLogo">
                         </div>
                     </form>
                 </div>
