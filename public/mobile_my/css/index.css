@@ -24,3 +24,58 @@
     height: 100%;
 }
 
+/* 商品区域 */
+.lt_products {}
+
+.lt_products ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lt_products ul li {
+    width: 50%;
+    padding: 10px;
+}
+
+.lt_products ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    /* border: 1px solid #ccc; */
+    box-shadow: 0 0 4px gray;
+}
+
+.lt_products ul li a img {
+    width: 100%;
+    display: block;
+}
+
+.lt_products ul li a p {
+    font-size: 18px;
+    color: #1d89ff;
+    text-align: left;
+}
+
+.lt_products ul li a span {
+    font-size: 12px;
+}
+
+.lt_products ul li a span:first-of-type {
+    color: red;
+}
+
+.lt_products ul li a span:last-of-type {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.lt_products ul li a input[type=button] {
+    background-color: #007aff;
+    color: #fff;
+    width: 80px;
+    height: 30px;
+    margin: 10px 0;
+}
+
+
