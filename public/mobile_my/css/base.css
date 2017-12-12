@@ -49,6 +49,7 @@ ul , ol {
     flex: 1;
     /* background-color: pink; */
     position: relative;
+    overflow: hidden;
 }
 
 .lt_footer {

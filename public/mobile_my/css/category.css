@@ -1,0 +1,54 @@
+
+.lt_content {
+    display: flex;
+}
+.content_left{
+    width: 90px;
+    position: relative;
+}
+.content_left ul{}
+.content_left ul li{}
+.content_left ul li.active{}
+.content_left ul li.active a{
+    border-right: 1px solid transparent;
+}
+.content_left ul li a{} 
+.content_left ul li a {
+    height: 50px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    background-color: #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #000;
+}
+
+.content_right {
+    flex: 1;
+    position: relative;
+}
+
+.content_right ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content_right ul li{
+    width: 33.333333%;
+}
+
+.content_right ul li a{
+    display: block;
+    width: 100%; 
+}
+
+.content_right ul li a img{
+    width: 62px;
+    display: block;
+    margin: 0 auto;
+}
+
+.content_right ul li a p{
+    text-align: center;
+    color: gray;
+}

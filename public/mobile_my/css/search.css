@@ -1,0 +1,66 @@
+
+.lt_content{}
+
+.lt_content form {
+    display: flex;
+    padding: 10px;
+}
+
+.lt_content form input {
+    flex: 1;
+    height: 34px;
+    border-radius: 5px;
+    border: 1px solid #006699;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.lt_content form button {
+    width: 60px;
+    height: 34px;
+    background-color: #006699;
+    color: #fff;
+    border-radius: 5px;
+    border-color: #006699;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* 搜索历史 */
+.searh-history {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.searh-history span{
+    color: gray;
+    font-size: 12px;
+}
+/* 搜索历史纪录 */
+.history_list {
+    padding: 0 10px;
+}
+
+.history_list ul{}
+
+.history_list ul li{
+    padding: 4px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px dashed lightgray;
+    margin-bottom: -1px;
+}
+
+.history_list ul li a{
+    color: #007aff;
+    font-size: 12px;
+}
+
+.history_list ul li span{
+    color: lightgray;
+    
+}
