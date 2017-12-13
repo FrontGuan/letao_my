@@ -1,0 +1,71 @@
+
+
+.lt_content {
+    background-color: #fff;
+}
+.lt_content .shoppingCar_item{}
+.lt_content .shoppingCar_item li{}
+.lt_content .shoppingCar_item li a{}
+
+.lt_content  li a .pic{
+    padding: 10px;
+}
+
+.lt_content  li a .pic img.mui-media-object{
+    display: block;
+    max-width: 60px;
+    height: 60px;
+    margin-top: -5px;
+}
+
+.lt_content  li a .pic input{
+    margin-top: 3px;
+    display: block;
+}    
+.lt_content li a .mui-meida-body{
+
+}
+
+.lt_content li a .mui-media-body >p{
+    white-space: normal;
+}
+
+.lt_content li a .mui-media-body .price_desc{
+    font-size: 12px;
+}
+
+.lt_content li a .mui-media-body .price_desc .price {
+    color: red;
+    font-size: 14px;
+}
+
+.lt_content  li a .mui-media-body .price_desc .oldPrice{
+    color: gray;
+}
+
+.lt_content  li a .mui-media-body .price_desc .num{
+    color: gray;
+}
+
+/* 底部生成订单 */
+.lt_orderList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lt_orderList p {
+    color: red;
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+.lt_orderList p span{
+}
+
+.lt_orderList button{
+    background-color: red;
+    color: #fff;
+    border-radius: 0;
+    height: 30px;
+}

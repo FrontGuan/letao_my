@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>搜索中心</title>
+    <title>个人中心</title>
     <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
     <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
     <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/search.css">
+    <link rel="stylesheet" href="./css/userCenter.css">
 </head>
 
 <body>
@@ -18,43 +18,36 @@
             <a href="javascript:void(0)">
                 <span class="fa fa-chevron-left"></span>
             </a>
-            <h4>搜索中心</h4>
+            <h4>个人中心</h4>
             <a href="">
-                <span class="fa fa-search"></span>
+                <span class="fa fa-search" style="display:none"></span>
             </a>
         </div>
         <div class="lt_content">
-            <!-- 搜索框 -->
-            <form action="./searchList.html">
-                <input type="text" placeholder="请输入搜索关键字">
-                <button>搜索</button>
-            </form>
-            <!-- 搜索历史 -->
-            <div class="searh-history">
-                <span>搜索历史</span>
-                <span>
-                    <i class="fa fa-trash-o"></i>清空记录</span>
-            </div>
-            <!-- 历史纪录 -->
-            <div class="history_list">
-                <ul>
-                    <li>
-                        <a href="javascript:void(0)">federer</a>
-                        <span class="fa fa-close"></span>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">federer</a>
-                        <span class="fa fa-close"></span>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">federer</a>
-                        <span class="fa fa-close"></span>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">federer</a>
-                        <span class="fa fa-close"></span>
-                    </li>
-                </ul>
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">
+                        <img class="mui-media-object mui-pull-left" src="./images/user.jpg">
+                        <div class="mui-media-body">
+                            itcast
+                            <p class="mui-ellipsis">绑定手机:
+                                <span>18888888888</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">账号与安全</a>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">我的购物车</a>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">收货地址管理</a>
+                </li>
+            </ul>
+            <div class="btn_exit">
+                <button type="button" class="mui-btn">退出</button>
             </div>
         </div>
         <div class="lt_footer">
@@ -91,5 +84,6 @@
 </html>
 
 <script src="./lib/mui/js/mui.min.js"></script> <script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/zepto/zepto.min.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/search.js"></script>
+<script src="./js/userCenter.js"></script>

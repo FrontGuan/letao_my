@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/productDetail.css">
+</head>
+
+<body>
+    <div class="lt_container">
+        <div class="lt_header">
+            <a href="javascript:void(0)">
+                <span class="fa fa-chevron-left"></span>
+            </a>
+            <h4>商品详情</h4>
+            <a href="search.html">
+                <span class="fa fa-refresh"></span>
+            </a>
+        </div>
+        <div class="lt_content">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容 区域滚动组件默认为absolute定位，全屏显示-->
+                    <!-- 所以得给父盒子lt_content设置相对定位,否则会相对于body定位 -->
+
+                    <!-- 轮播图 -->
+                    <div id="slider" class="mui-slider">
+                        <div class="mui-slider-group mui-slider-loop">
+                            <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                            <div class="mui-slider-item mui-slider-item-duplicate">
+                                <a href="#">
+                                    <img src="./images/banner4.png">
+                                </a>
+                            </div>
+                            <!-- 第一张 -->
+                            <div class="mui-slider-item">
+                                <a href="#">
+                                    <img src="./images/banner1.png">
+                                </a>
+                            </div>
+                            <!-- 第二张 -->
+                            <div class="mui-slider-item">
+                                <a href="#">
+                                    <img src="./images/banner2.png">
+                                </a>
+                            </div>
+                            <!-- 第三张 -->
+                            <div class="mui-slider-item">
+                                <a href="#">
+                                    <img src="./images/banner3.png">
+                                </a>
+                            </div>
+                            <!-- 第四张 -->
+                            <div class="mui-slider-item">
+                                <a href="#">
+                                    <img src="./images/banner4.png">
+                                </a>
+                            </div>
+                            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                            <div class="mui-slider-item mui-slider-item-duplicate">
+                                <a href="#">
+                                    <img src="./images/banner1.png">
+                                </a>
+                            </div>
+                            <!-- 轮播指示点 -->
+                            <div class="mui-slider-indicator">
+                                <div class="mui-indicator mui-active"></div>
+                                <div class="mui-indicator"></div>
+                                <div class="mui-indicator"></div>
+                                <div class="mui-indicator"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 商品详细信息 -->
+                    <div class="product_detail">
+                        <ul>
+                            <li>
+                                <p class="name">Sport飓风 Nike Kwazi 休闲运动鞋男 844839-002-001-100-400</p>
+                            </li>
+                            <li>
+                                <span>价格: </span>
+                                <span class="price">&nbsp;¥499.1</span>
+                                <span class="oldPrice">¥888.1</span>
+                            </li>
+                            <li>
+                                <span>尺码:</span>&nbsp;&nbsp;
+                                <span class="size">31</span>
+                                <span class="size">32</span>
+                                <span class="size">33</span>
+                                <span class="size">34</span>
+                                <span class="size">35</span>
+                                <span class="size">36</span>
+                                <span class="size">37</span>
+                                <span class="size">38</span>
+                                <span class="size">39</span>
+                                <span class="size">40</span>
+                                <span class="size">41</span>
+                                <span class="size">42</span>
+                                <span class="size">43</span>
+                                <span class="size">44</span>
+                                <span class="size">45</span>
+                                <span class="size">46</span>
+                                <span class="size">47</span>
+                                <span class="size">48</span>
+                                <span class="size">49</span>
+                                <span class="size">50</span>
+                            </li>
+                            <li>
+                                <span>库存:&nbsp;&nbsp;</span>
+                                <div class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='100'>
+                                    <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+                                    <input class="mui-numbox-input" type="number" />
+                                    <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+                                </div>
+                                <span class="num">&nbsp;剩余数量:&nbsp;
+                                    <i>20</i>双</span>
+                            </li>
+                            <li>
+                                <span>详情:</span>
+                                <span>&nbsp; Roger Federer is GOAT of tennis</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 库存 -->
+
+                </div>
+            </div>
+
+        </div>
+        <div class="lt_footer product">
+            <a href="mui-pull-left">去购物车</a>
+            <div class="btns">
+                <button type="button" class="mui-btn mui-btn-danger">加入购物车</button>
+                <button type="button" class="mui-btn mui-btn-warning">立即购买</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/productDetail.js"></script>
