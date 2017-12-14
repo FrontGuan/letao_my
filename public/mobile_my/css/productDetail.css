@@ -39,7 +39,12 @@
     border: 1px solid lightgray;
     text-align: center;
     line-height: 25px;
-}    
+}   
+
+.product_detail ul li span.size.active {
+    background-color: #006699;
+    color: #fff;
+}
 
 .product_detail ul li span.num{
     font-size: 12px;
@@ -62,5 +67,10 @@
 
 .lt_footer.product .btns{
     margin-right: 10px;
+}
+
+/* mui轮播图指示点 */
+.mui-slider-indicator .mui-indicator.mui-active {
+    background-color: #006699;
 }
     

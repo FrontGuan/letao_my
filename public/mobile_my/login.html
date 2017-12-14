@@ -8,6 +8,7 @@
     <title>登陆</title>
     <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
     <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/login.css">
 </head>
@@ -27,11 +28,11 @@
             <form class="mui-input-group">
                 <div class="mui-input-row">
                     <label>用户名</label>
-                    <input type="text" class="mui-input-clear" placeholder="请输入用户名">
+                    <input name="username" type="text" class="mui-input-clear" placeholder="请输入用户名">
                 </div>
                 <div class="mui-input-row">
                     <label>密码</label>
-                    <input type="password" class="mui-input-password" placeholder="请输入密码">
+                    <input name="password" type="password" class="mui-input-password" placeholder="请输入密码">
                 </div>
                 <div class="mui-button-row">
                     <button type="submit" class="mui-btn mui-btn-primary">登陆</button>
@@ -39,7 +40,7 @@
                 </div>
             </form>
             <!-- 立即注册 -->
-            <a href="javascript:void(0)" class="register mui-pull-right">立即注册</a>
+            <a href="./register.html" class="register mui-pull-right">立即注册</a>
         </div>
         <div class="lt_footer">
             <ul>

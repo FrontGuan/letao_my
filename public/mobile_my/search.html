@@ -26,7 +26,7 @@
         <div class="lt_content">
             <!-- 搜索框 -->
             <form action="./searchList.html">
-                <input type="text" placeholder="请输入搜索关键字">
+                <input name="key" type="text" placeholder="请输入搜索关键字">
                 <button>搜索</button>
             </form>
             <!-- 搜索历史 -->
@@ -90,6 +90,17 @@
 
 </html>
 
-<script src="./lib/mui/js/mui.min.js"></script> <script src="./lib/zepto/zepto.min.js"></script>
+<script type="text/html" id="historyTmp">
+    {{each}}
+        <li>
+            <a href="javascript:void(0)">{{$value}}</a>
+            <span class="fa fa-close"></span>
+        </li>
+    {{/each}}
+</script>
+
+<script src="./lib/mui/js/mui.min.js"></script> 
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
 <script src="./js/common.js"></script>
 <script src="./js/search.js"></script>

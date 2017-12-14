@@ -30,6 +30,7 @@ $(function(){
 		//跳到前一次页面
 		window.history.back();
 	})
+
 })
 
 

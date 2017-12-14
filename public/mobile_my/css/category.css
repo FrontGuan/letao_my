@@ -8,9 +8,12 @@
 }
 .content_left ul{}
 .content_left ul li{}
-.content_left ul li.active{}
+.content_left ul li.active{
+    background-color: #fff;
+}
 .content_left ul li.active a{
     border-right: 1px solid transparent;
+    background-color: #fff;    
 }
 .content_left ul li a{} 
 .content_left ul li a {
@@ -19,8 +22,8 @@
     text-align: center;
     line-height: 50px;
     background-color: #ccc;
-    border-right: 1px solid #ccc;
-    border-bottom: 1px solid #000;
+    border-right: 1px solid #006699;
+    border-bottom: 1px solid #006699;
 }
 
 .content_right {
